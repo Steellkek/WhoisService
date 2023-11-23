@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "8xF0yeatQMpR3DkZUtZTDyfPg4cGUFMDSWeXFL94Vwk=",
+  "Source": "WhoisService.Frontend",
+  "BasePath": "_content/WhoisService.Frontend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WhoisService.Frontend\\wwwroot",
+      "Source": "WhoisService.Frontend",
+      "ContentRoot": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\",
+      "BasePath": "_content/WhoisService.Frontend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\assets\\bundle.js",
+      "SourceId": "WhoisService.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\",
+      "BasePath": "_content/WhoisService.Frontend",
+      "RelativePath": "assets/bundle.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\bundle.js"
+    },
+    {
+      "Identity": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\assets\\bundle.js.map",
+      "SourceId": "WhoisService.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\",
+      "BasePath": "_content/WhoisService.Frontend",
+      "RelativePath": "assets/bundle.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\bundle.js.map"
+    }
+  ]
+}

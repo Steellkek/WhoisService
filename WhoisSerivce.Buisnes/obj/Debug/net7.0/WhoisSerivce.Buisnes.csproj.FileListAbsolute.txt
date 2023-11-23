@@ -1,0 +1,12 @@
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\bin\Debug\net7.0\WhoisSerivce.Buisnes.deps.json
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\bin\Debug\net7.0\WhoisSerivce.Buisnes.dll
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\bin\Debug\net7.0\WhoisSerivce.Buisnes.pdb
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\WhoisSerivce.Buisnes.csproj.AssemblyReference.cache
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\WhoisSerivce.Buisnes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\WhoisSerivce.Buisnes.AssemblyInfoInputs.cache
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\WhoisSerivce.Buisnes.AssemblyInfo.cs
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\WhoisSerivce.Buisnes.csproj.CoreCompileInputs.cache
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\WhoisSerivce.Buisnes.dll
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\refint\WhoisSerivce.Buisnes.dll
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\WhoisSerivce.Buisnes.pdb
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisSerivce.Buisnes\obj\Debug\net7.0\ref\WhoisSerivce.Buisnes.dll

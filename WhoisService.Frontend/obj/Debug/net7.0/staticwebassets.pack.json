@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\assets\\bundle.js",
+      "PackagePath": "staticwebassets\\assets\\bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\assets\\bundle.js.map",
+      "PackagePath": "staticwebassets\\assets\\bundle.js.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WhoisService.Frontend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.WhoisService.Frontend.props",
+      "PackagePath": "build\\WhoisService.Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.WhoisService.Frontend.props",
+      "PackagePath": "buildMultiTargeting\\WhoisService.Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.WhoisService.Frontend.props",
+      "PackagePath": "buildTransitive\\WhoisService.Frontend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
