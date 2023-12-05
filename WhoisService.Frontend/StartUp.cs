@@ -26,6 +26,7 @@ namespace HelloApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseWebpackDevMiddleware();
             }
  
             app.UseDefaultFiles(new DefaultFilesOptions { DefaultFileNames = new 

@@ -29190,7 +29190,38 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       event.preventDefault();
-      var domen = "kai.ru";
+      var domen = event.target[0].value;
+      var listDomen = domen.split('.');
+      if (!domen) {
+        alert("Вы ввели пустую строчку!");
+        return;
+      }
+      if (listDomen.length == 1) {
+        alert("Вы не ввели адрес!");
+        return;
+      }
+      if (domen.indexOf(' ') > -1) {
+        alert("В домене присутвуют пробелы!");
+        return;
+      }
+      if (listDomen.length > 127) {
+        alert("У вас больше 127 поддоменов!");
+        return;
+      }
+      if (domen.length > 255) {
+        alert('У вас больше 255 символов в домене!');
+        return;
+      }
+      for (var i = 0; i < listDomen.length; i++) {
+        if (listDomen[i] == "") {
+          alert("Один из поддоменов пустой!");
+          return;
+        }
+        if (listDomen[i].length > 63) {
+          alert("Поддомены содержат больше 63 символов!");
+          return;
+        }
+      }
       fetch('/api/whois/getwhois/' + domen).then(function (response) {
         return response.json();
       }).then(function (result) {
@@ -29202,17 +29233,35 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
-        onSubmit: this.handleSubmit
-      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", null, "Name:", /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+        onSubmit: this.handleSubmit,
+        className: "md-form"
+      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "container-sm"
+      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "col"
+      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "text",
+        id: "form1",
         value: this.state.value,
-        onChange: this.handleChange
-      })), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+        onChange: this.handleChange,
+        maxLength: 255,
+        placeholder: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u043E\u043C\u0435\u043D/ip-\u0430\u0434\u0440\u0435\u0441",
+        className: "form-control"
+      })), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "col"
+      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "submit",
-        value: "Submit"
-      }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr", null), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+        value: "\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C",
+        className: "btn btn-primary"
+      })))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr", null), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "container-sm",
+        style: {
+          backgroundColor: 'Silver'
+        },
         id: "whoisInfo"
-      }, "\u041F\u0440\u0438\u0432\u0435\u0442"));
+      }));
     }
   }]);
   return App;
