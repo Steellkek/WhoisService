@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.14" />
       <PackageReference Include="RimuTec.AspNetCore.SpaServices.Extensions" Version="1.0.0" />
     </ItemGroup>
 

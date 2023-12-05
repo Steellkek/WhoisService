@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\assets\\bundle.js.map"
     },
     {
+      "Id": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\css\\Search.css",
+      "PackagePath": "staticwebassets\\css\\Search.css"
+    },
+    {
+      "Id": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WhoisService.Frontend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

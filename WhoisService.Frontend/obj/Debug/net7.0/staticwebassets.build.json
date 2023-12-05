@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8xF0yeatQMpR3DkZUtZTDyfPg4cGUFMDSWeXFL94Vwk=",
+  "Hash": "nMG4qLJzYe4KZX5JIaxl2OLlmb8w9aAZaMz4ltnr+Ac=",
   "Source": "WhoisService.Frontend",
   "BasePath": "_content/WhoisService.Frontend",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\bundle.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\css\\bootstrap.min.css",
+      "SourceId": "WhoisService.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\",
+      "BasePath": "_content/WhoisService.Frontend",
+      "RelativePath": "css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\css\\Search.css",
+      "SourceId": "WhoisService.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\wwwroot\\",
+      "BasePath": "_content/WhoisService.Frontend",
+      "RelativePath": "css/Search.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Search.css"
     }
   ]
 }

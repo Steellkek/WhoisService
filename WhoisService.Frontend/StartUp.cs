@@ -15,6 +15,10 @@ namespace HelloApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -22,23 +26,19 @@ namespace HelloApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseWebpackDevMiddleware();
             }
-
+ 
+            app.UseDefaultFiles(new DefaultFilesOptions { DefaultFileNames = new 
+                List<string> { "/Index.html" } });
+            app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseRouting();
 
+            app.UseRouting();
+            
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-                endpoints.MapControllerRoute(
-                    name: "api",
-                    pattern: "api/{controller=Default}/{action=Index}/{id?}");
-
-                endpoints.MapFallbackToController("Index", "Home");
+                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
             });
         }
     }

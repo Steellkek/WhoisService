@@ -6,9 +6,9 @@ namespace WhoisService.Controllers;
 [ApiController]
 public class WhoisController : Controller
 {
-    [Route("getwhois")]
-    [HttpGet]
-    public IActionResult GetWhois(string domen = "kai.ru")
+    //[Route("getwhois")]
+    [HttpGet(("getwhois/{domen}"))]
+    public IActionResult GetWhois(string? domen)
     {            
         List<string> whoisServers = null;
         //разбиваем домен на уровни

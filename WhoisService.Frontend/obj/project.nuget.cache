@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "7kc4vjsO7HNGo2jVP6fK7N/TYFCplKXChIcZ0jr5kRy5FvB+aEIodq4CYdjsWOwBkZKNLFqi1iTNbw5/oaGeEA==",
+  "dgSpecHash": "qf/M88dFsQRNv9rB4XILlzi6DOXzsmLdxGT2pnbyQjSc3SSLCyD/UXnQVeAeCGTi4HvW39gysRuD/nZmBii48Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Arthur\\RiderProjects\\WhoisService\\WhoisService.Frontend\\WhoisService.Frontend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.14\\microsoft.aspnetcore.jsonpatch.7.0.14.nupkg.sha512",
+    "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.14\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.14.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.1\\microsoft.aspnetcore.nodeservices.3.1.1.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\3.1.1\\microsoft.aspnetcore.spaservices.3.1.1.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\3.1.1\\microsoft.aspnetcore.spaservices.extensions.3.1.1.nupkg.sha512",
+    "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.1\\microsoft.extensions.configuration.3.1.1.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.1\\microsoft.extensions.configuration.abstractions.3.1.1.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.1\\microsoft.extensions.configuration.binder.3.1.1.nupkg.sha512",
@@ -22,7 +25,8 @@
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.extensions.options\\3.1.1\\microsoft.extensions.options.3.1.1.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.1\\microsoft.extensions.options.configurationextensions.3.1.1.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.1\\microsoft.extensions.primitives.3.1.1.nupkg.sha512",
-    "C:\\Users\\Arthur\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Arthur\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Arthur\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\rimutec.aspnetcore.spaservices.extensions\\1.0.0\\rimutec.aspnetcore.spaservices.extensions.1.0.0.nupkg.sha512"
   ],
   "logs": []

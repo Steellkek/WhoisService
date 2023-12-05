@@ -38,3 +38,6 @@ C:\Users\Arthur\RiderProjects\WhoisService\WhoisService.Frontend\obj\Debug\net7.
 C:\Users\Arthur\RiderProjects\WhoisService\WhoisService.Frontend\obj\Debug\net7.0\ref\WhoisService.Frontend.dll
 C:\Users\Arthur\RiderProjects\WhoisService\WhoisService.Frontend\bin\Debug\net7.0\WhoisSerivce.Buisnes.dll
 C:\Users\Arthur\RiderProjects\WhoisService\WhoisService.Frontend\bin\Debug\net7.0\WhoisSerivce.Buisnes.pdb
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisService.Frontend\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisService.Frontend\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Arthur\RiderProjects\WhoisService\WhoisService.Frontend\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
