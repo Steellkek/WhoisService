@@ -7,7 +7,6 @@ namespace WhoisService.Controllers;
 [ApiController]
 public class WhoisController : Controller
 {
-    //[Route("getwhois")]
     [HttpGet(("getwhois/{domen}"))]
     public IActionResult GetWhois(string domen)
     {

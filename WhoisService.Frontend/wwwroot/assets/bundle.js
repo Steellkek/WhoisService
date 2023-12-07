@@ -29190,43 +29190,48 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       event.preventDefault();
+      var whoisInfo = document.getElementById('whoisInfo');
       var domen = event.target[0].value;
-      var listDomen = domen.split('.');
       if (!domen) {
         alert("Вы ввели пустую строчку!");
         return;
       }
-      if (listDomen.length == 1) {
-        alert("Вы не ввели адрес!");
+      var listDomen = domen.split('.');
+      var ipv46_regex = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/gm;
+      var isIp = ipv46_regex.test(domen);
+      if (listDomen.length == 1 && !isIp) {
+        alert("Вы не ввели домен!");
         return;
       }
-      if (domen.indexOf(' ') > -1) {
+      if (domen.indexOf(' ') > -1 && !isIp) {
         alert("В домене присутвуют пробелы!");
         return;
       }
-      if (listDomen.length > 127) {
+      if (listDomen.length > 127 && !isIp) {
         alert("У вас больше 127 поддоменов!");
         return;
       }
-      if (domen.length > 255) {
+      if (domen.length > 255 && !isIp) {
         alert('У вас больше 255 символов в домене!');
         return;
       }
-      for (var i = 0; i < listDomen.length; i++) {
-        if (listDomen[i] == "") {
-          alert("Один из поддоменов пустой!");
-          return;
-        }
-        if (listDomen[i].length > 63) {
-          alert("Поддомены содержат больше 63 символов!");
-          return;
+      if (!isIp) {
+        for (var i = 0; i < listDomen.length; i++) {
+          if (listDomen[i] == "") {
+            alert("Один из поддоменов пустой!");
+            return;
+          }
+          if (listDomen[i].length > 63) {
+            alert("Поддомены содержат больше 63 символов!");
+            return;
+          }
         }
       }
+      whoisInfo.innerText = "Загрузка...";
       fetch('/api/whois/getwhois/' + domen).then(function (response) {
         return response.json();
       }).then(function (result) {
-        var x = document.getElementById('whoisInfo');
-        x.innerText = result;
+        whoisInfo.innerText = result;
       });
     }
   }, {
@@ -29240,7 +29245,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "row"
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "col"
+        className: "col-9"
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "text",
         id: "form1",

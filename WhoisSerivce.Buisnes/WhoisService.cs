@@ -91,28 +91,38 @@ public class WhoisServiceService
     {
         const string whoisServer = "whois.iana.org";
         var result = new StringBuilder();
-        using (TcpClient tcpClient = new TcpClient())
+        try
         {
-            tcpClient.Connect(whoisServer.Trim(), 43);
-            byte[] domainQueryBytes = Encoding.ASCII.GetBytes(ip + "\r\n");
-            using (Stream stream = tcpClient.GetStream())
+            using (TcpClient tcpClient = new TcpClient())
             {
-                //отправляем запрос на сервер WHOIS
-                stream.Write(domainQueryBytes, 0, domainQueryBytes.Length);
-                //читаем ответ в формате UTF8, так как некоторые национальные домены содержат информацию на местном языке
-                using (StreamReader sr = new StreamReader(tcpClient.GetStream(), Encoding.UTF8))
+                tcpClient.Connect(whoisServer.Trim(), 43);
+                byte[] domainQueryBytes = Encoding.ASCII.GetBytes(ip + "\r\n");
+                using (Stream stream = tcpClient.GetStream())
                 {
-                    string row;
-                    while ((row = sr.ReadLine()) != null)
-                        result.AppendLine(row);
+                    //отправляем запрос на сервер WHOIS
+                    stream.Write(domainQueryBytes, 0, domainQueryBytes.Length);
+                    //читаем ответ в формате UTF8, так как некоторые национальные домены содержат информацию на местном языке
+                    using (StreamReader sr = new StreamReader(tcpClient.GetStream(), Encoding.UTF8))
+                    {
+                        string row;
+                        while ((row = sr.ReadLine()) != null)
+                            result.AppendLine(row);
+                    }
                 }
             }
+
+            throw new Exception();
+            
+            Regex regex = new Regex(@"whois\.\S*");
+            MatchCollection matches = regex.Matches(result.ToString());
+            var res = matches.Select(x => x.ToString()).Distinct().ToList();
+            return res;
+        }
+        catch (Exception e)
+        {
+            throw new Exception("Ошибка при обращении к серверу " + whoisServer);
         }
 
-        Regex regex = new Regex(@"whois\.\S*");
-        MatchCollection matches = regex.Matches(result.ToString());
-        var res = matches.Select(x => x.ToString()).Distinct().ToList();
-        return res;
     }
 
     private string Lookup(string whoisServer, string domainName)
@@ -160,7 +170,7 @@ public class WhoisServiceService
         }
         catch
         {
-            throw new Exception("Ошибка при обращении к серверу" + whoisServer);
+            throw new Exception("Ошибка при обращении к серверу " + whoisServer);
         }
         
         return "Не удалось получить данные с сервера " + whoisServer;
